@@ -1,0 +1,281 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fefefe;
+  color: #222;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* HEADER */
+header {
+  background-color: #4caf50;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c8facc;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* SOBRE */
+.sobre {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 0;
+  flex-wrap: wrap;
+}
+
+.sobre-foto img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sobre-foto img:hover {
+  transform: scale(1.05);
+}
+
+.sobre-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.sobre-texto h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.sobre-lista {
+  list-style: none;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.sobre-lista li {
+  margin-bottom: 10px;
+}
+
+.sobre-lista a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sobre-lista a:hover {
+  text-decoration: underline;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.tech-icons img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.2);
+}
+
+.social-badges {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-badges a img {
+  height: 35px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.social-badges a img:hover {
+  filter: brightness(85%);
+}
+
+@media (max-width: 768px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-foto img {
+    width: 180px;
+  }
+
+  .sobre-texto {
+    min-width: auto;
+  }
+}
+
+/* PROJETOS */
+.projetos {
+  padding-bottom: 60px;
+}
+
+.projetos h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #222;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.card-body p {
+  margin-bottom: 16px;
+  color: #555;
+  font-size: 16px;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.card-body a:hover {
+  border-color: #4caf50;
+}
+
+/* CONTATO */
+.contato {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+.contato h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contato p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-email {
+  background-color: white;
+  color: #4caf50;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-email:hover {
+  background-color: #3a9d3a;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* Animação fade-in para seções */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

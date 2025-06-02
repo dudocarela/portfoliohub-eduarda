@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas da Duda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍰 Receitas da Duda</h1>
+    <p>Descubra receitas deliciosas feitas com carinho!</p>
+  </header>
+
+  <main class="receitas">
+    <div class="card">
+      <img src="img/bolo.jpg" alt="Bolo de Chocolate">
+      <h2>Bolo de Chocolate</h2>
+      <p>Um bolo fofinho e delicioso para qualquer ocasião.</p>
+      <button onclick="mostrarReceita('bolo')">Ver receita</button>
+    </div>
+    <div class="card">
+      <img src="img/panqueca.jpg" alt="Panqueca">
+      <h2>Panquecas Doces</h2>
+      <p>Simples, rápidas e perfeitas pro café da manhã.</p>
+      <button onclick="mostrarReceita('panqueca')">Ver receita</button>
+    </div>
+    <div class="card">
+      <img src="img/lasanha.jpg" alt="Lasanha">
+      <h2>Lasanha</h2>
+      <p>A clássica lasanha caseira, irresistível!</p>
+      <button onclick="mostrarReceita('lasanha')">Ver receita</button>
+    </div>
+  </main>
+
+  <section class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <div id="receita-texto"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Feito com 💜 por Eduarda Soares | 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
